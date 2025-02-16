@@ -1,0 +1,6 @@
+System.Address: (4,3) Size: 100 Price: 2000000 Users.Seller: Abram
+System.Address: (5,2,1) Size: 60 Price: 180000 Users.Seller: Ben
+System.Address: (6,7,3,2) Size: 80 Price: 800000 Users.Seller: Alise
+System.Address: (4,3,2,2,1) Size: 45 Price: 45000 Users.Seller: Abram
+System.Address: (2,5,1) Size: 75 Price: 150000 Users.Seller: Evan
+System.Address: (3,4,2,1) Size: 60 Price: 60000 Users.Seller: John
