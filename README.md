@@ -65,7 +65,7 @@ edit information, and manage additional services.
    
 2. **Factory Pattern**:
    PropertyFactory is used to create property objects.  
-   -**Example**: The `PropertyFactory` class provides a method to create an `Apartment` object.
+   - **Example**: The `PropertyFactory` class provides a method to create an `Apartment` object.
       ```java
       public class PropertyFactory {
           public static Property createApartment(double size, double price, Address address, Seller owner) {
