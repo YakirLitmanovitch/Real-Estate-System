@@ -1,7 +1,9 @@
 # Real Estate System
 
 ## Overview
-The Real Estate System is a Java-based application that simulates a property management system. It allows different types of users (buyers, sellers, brokers) to interact with properties, view details, edit information, and manage additional services.
+The Real Estate System is a Java-based application that simulates a property management system.
+It allows different types of users (buyers, sellers, brokers) to interact with properties, view details,
+edit information, and manage additional services.
 
 ## Functionality
 - **Property Management**: Create, view, edit, and delete properties.
@@ -63,7 +65,7 @@ The Real Estate System is a Java-based application that simulates a property man
    
 2. **Factory Pattern**:
    PropertyFactory is used to create property objects.  
-   **Example**: The `PropertyFactory` class provides a method to create an `Apartment` object.
+   -**Example**: The `PropertyFactory` class provides a method to create an `Apartment` object.
       ```java
       public class PropertyFactory {
           public static Property createApartment(double size, double price, Address address, Seller owner) {
@@ -74,7 +76,7 @@ The Real Estate System is a Java-based application that simulates a property man
 
 3. **Singleton Pattern**:
    PropertySystem ensures a single instance of the property system. 
-   **Example**: The `PropertySystem` class uses a private constructor and a static method to ensure only one instance exists.
+   - **Example**: The `PropertySystem` class uses a private constructor and a static method to ensure only one instance exists.
       ```java
       public class PropertySystem {
           private static PropertySystem instance;
@@ -91,7 +93,7 @@ The Real Estate System is a Java-based application that simulates a property man
 
 4. **Strategy Pattern**:
    Used in PropertySystem for different property search strategies. 
-   Example: The `PropertySystem` class can use different strategies to search for properties based on price or location.
+   - **Example**: The `PropertySystem` class can use different strategies to search for properties based on price or location.
       ```java
       public class PropertySystem {
           public List<Property> getPropertiesByPrice(String address, int radius, double price, String comparison) {
@@ -105,7 +107,7 @@ The Real Estate System is a Java-based application that simulates a property man
 
 5. **Decorator Pattern**:
    Additional services (design, moving, cleaning, guarantor) can be added to properties dynamically. 
-   Example: The `Broker` class can add or remove additional services to a property.
+   - **Example**: The `Broker` class can add or remove additional services to a property.
       ```java
       public class Broker {
           public void addService(Property property, String service) {
@@ -125,23 +127,23 @@ The Real Estate System is a Java-based application that simulates a property man
 - **MainTest.java**: Unit tests for the main functionalities of the system.
 
 ### Key Classes and Methods
-**PropertySystem**: Manages properties and notifications.
-      *`getInstance()`: Returns the singleton instance.
-      *`setNotifier()`: Registers an observer.
-      *`notifyAllObservers()`: Notifies all registered observers.
-      *`addProperty()`: Adds a property manually to the system.
+- **PropertySystem**: Manages properties and notifications.
+  - **`getInstance()`**: Returns the singleton instance.
+  - **`setNotifier()`**: Registers an observer.
+  - **`notifyAllObservers()`**: Notifies all registered observers.
+  - **`addProperty()`**: Adds a property manually to the system.
       
-**Property**: Represents a property with attributes like size, price, address, owner.
-      *`setPrice()`: Sets the property price.
-      *`markAsSold()`: Marks the property as sold.
+- **Property**: Represents a property with attributes like size, price, address, owner.
+  - **`setPrice()`**: Sets the property price.
+  - **`markAsSold()`**: Marks the property as sold.
 
-**Buyer**: Implements `User` interface, can view properties.
+- **Buyer**: Implements `User` interface, can view properties.
 
-**Seller**: Implements `User` interface, can view and delete owned properties.
-      *`deleteProperty()`: Deletes a property if the seller is the owner.
+- **Seller**: Implements `User` interface, can view and delete owned properties.
+  - **`deleteProperty()`**: Deletes a property if the seller is the owner.
 
-**Broker**: Implements `User` interface, can view, edit, sell properties, and manage additional services.
-      *`editProperty()`: Edits the property price.
-      *`sellProperty()`: Sells a property.
-      *`addService()`: Adds a service to a sold property.
-      *`deleteAdditionalService()`: Deletes an additional service from a property.
+- **Broker**: Implements `User` interface, can view, edit, sell properties, and manage additional services.
+  - **`editProperty()`**: Edits the property price.
+  - **`sellProperty()`**: Sells a property.
+  - **`addService()`**: Adds a service to a sold property.
+  - **`deleteAdditionalService()`**: Deletes an additional service from a property.
