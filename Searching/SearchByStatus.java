@@ -24,7 +24,7 @@ public class SearchByStatus implements SearchStrategy {
     public List<Property> search(List<Property> properties) {
         List<Property> result = new ArrayList<>();
         for (Property property : properties) {
-            if (property.canBeSold() == canBeSold) {
+            if (property.canBeSold() == canBeSold && !property.isSold()) {
                 result.add(property);
             }
         }
